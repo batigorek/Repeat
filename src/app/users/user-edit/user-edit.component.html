@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <form [formGroup]="userForm">
+        <div class="form-group">
+            <label for="username">Name</label>
+            <input type="text" class='form-control'
+            formControlName='name' id='username'/>
+        </div>
+        <div class="form-group">
+            <label for="usesurname">Surame</label>
+            <input type="text" class='form-control'
+            formControlName='surname' id='usersurname'/>
+        </div>
+        <button class="btn btn-primary mr-4 " 
+        (click)='onSave()'[disabled]='userForm.invalid'>Save</button>
+        <button class="btn btn-danger mr-4 "
+        (click)='onDelete()' *ngIf="id != null">Delete</button>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col" class="text-right" (click)="onAddProfile()">
+                <button class="btn btn-primary">
+                    Add
+                </button>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <th scope="row">{{user.id}}</th>
+            <td>{{user.name}}</td>
+            <td>{{user.surname}}</td>
+            <td class="text-right">
+                <button class="btn-primary" (click)="onChangeProfile(user.id)">
+                    Change
+                </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
